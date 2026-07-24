@@ -1,0 +1,125 @@
+    html, body { 
+      font-family: 'Poppins', sans-serif; 
+      background-color: #e9ecef; 
+      margin: 0; 
+      padding: 0; 
+      width: 100%;
+      overflow-x: hidden;
+    }
+    
+    .main-container { 
+      background: #ffffff; 
+      min-height: 100vh;
+      max-width: 800px; /* Batas maksimal di desktop agar rapi di tengah */
+      margin: 0 auto; 
+      border-radius: 0; /* TANPA BORDER RADIUS */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    
+    .header-bar { 
+      background: linear-gradient(90deg, #1877F2, #145dbf); 
+      color: white; 
+      padding: 15px; 
+      font-weight: 700; 
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .content-body { 
+      padding: 15px; /* Jarak standar untuk mobile */
+    }
+    
+    /* MODIFIKASI GLOBAL: HAPUS SEMUA BORDER RADIUS (SUDUT LANCIP/KOTAK) */
+    .form-control, .btn, .log-box, .dynamic-box, .card-box {
+      border-radius: 0 !important; 
+    }
+    
+    .btn-custom { background-color: #ff9900; color: white; font-weight: 600; border: none; transition: 0.2s; }
+    .btn-custom:hover { background-color: #e68a00; color: white; }
+    .btn-info { background-color: #17a2b8; border: none; }
+    .btn-primary { background-color: #1877F2; border: none; padding: 12px; font-size: 16px;}
+    .btn-primary:hover { background-color: #145dbf; }
+    
+    .icon-align { vertical-align: middle; font-size: 20px; margin-right: 6px; margin-bottom: 2px; }
+    
+    .log-box { 
+      background: #1e1e1e; color: #00ff00; padding: 15px; 
+      font-family: monospace; font-size: 12px; height: 180px; overflow-y: auto; 
+      margin-top: 15px; margin-bottom: 20px; 
+      border-left: 4px solid #1877F2; 
+    }
+    
+    .error-text { color: #ff4d4d; } .warning-text { color: #ffcc00; }
+    label { font-weight: 600; color: #333; margin-top: 15px; font-size: 13px; }
+    
+    .dynamic-box { 
+      padding: 15px;
+      background: #f8f9fa; 
+      border: 1px solid #dee2e6; 
+      margin-bottom: 20px; 
+      border-left: 4px solid #1877F2;
+    }
+    
+    .card-box { 
+      padding: 15px; 
+      background: #ffffff; 
+      border-left: 4px solid #ff9900; 
+      margin-bottom: 15px; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+      border: 1px solid #eee;
+    }
+    
+    h5 { font-weight: 700; color: #1877F2; margin-top: 0; font-size: 15px; margin-bottom: 15px;}
+    
+    /* CSS Modal Editor Gambar */
+    .modal-overlay { 
+      display: none; 
+      position: fixed; 
+      top: 0; left: 0; 
+      width: 100%; height: 100%; 
+      background: rgba(0,0,0,0.85); 
+      z-index: 9999; 
+      justify-content: center; 
+      align-items: center; 
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    
+    .modal-content-box { 
+      background: #ffffff; 
+      padding: 20px; 
+      border-radius: 0; 
+      width: 100%; 
+      max-width: 600px; 
+      max-height: 90vh; 
+      overflow-y: auto; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4); 
+    }
+    
+    .canvas-wrapper { 
+      margin: 15px 0; 
+      border: 2px dashed #1877F2; 
+      background: #f0f2f5; 
+      overflow: hidden; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      border-radius: 0; 
+      padding: 10px;
+    }
+    
+    .modal-content-box::-webkit-scrollbar { width: 6px; }
+    .modal-content-box::-webkit-scrollbar-thumb { background: #bbb; border-radius: 0; }
+    
+    /* Grid system flex yang rapi & responsif (membungkus jika layar kecil) */
+    .flex-group { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+    .flex-group > * { flex: 1; min-width: 100px; }
+    
+    .btn-group-header { display: flex; gap: 10px; margin-bottom: 20px; }
+    .card-title-header { font-weight: 700; display: flex; align-items: center; margin-bottom: 10px; color: #333; border-bottom: 1px solid #eee; padding-bottom: 8px; font-size: 13px;}
+    
+    @media (min-width: 768px) {
+      .content-body { padding: 30px; }
+      .modal-content-box { padding: 30px; }
+    }
